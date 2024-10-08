@@ -16,17 +16,19 @@ int main(int argc, char **argv)
             print_archiving_error(e);
             return 1;
         }
+        return 0;
     }
-    if (input == DEARCHIVING)
+    else if (input == DEARCHIVING)
     {
         DearchivingError e;
         if (output_path == NULL)
             output_path = ".";
         if (e = dearchivate(input_path, output_path))
         {
-        print_dearchiving_error(e);
-        return 1;
+            print_dearchiving_error(e);
+            return 1;
         }
+        return 0;
     }
     else
     {

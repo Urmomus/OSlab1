@@ -90,6 +90,7 @@ int print_archiving_error(ArchivingError e)
         break;
     case INVALID_OUTPUT:
         fprintf(stderr, "Invalid output file path\n");
+        break;
     default:
         abort();
     }
